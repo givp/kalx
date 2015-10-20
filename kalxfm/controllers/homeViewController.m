@@ -18,8 +18,8 @@
     [super viewDidLoad];
     
     _audioStream = [[FSAudioStream alloc] init];
-    [_audioStream setUrl:[NSURL URLWithString:STREAM_URL]];
-    //[_audioStream playFromURL:[NSURL URLWithString:STREAM_URL]];
+    //[_audioStream setUrl:[NSURL URLWithString:STREAM_URL]];
+    [_audioStream playFromURL:[NSURL URLWithString:STREAM_URL]];
     [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
     playing = NO;
     
