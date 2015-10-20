@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  homeViewController.h
 //  kalxfm
 //
 //  Created by Giv Parvaneh on 10/19/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface homeViewController : UIViewController
 
 @end
-
