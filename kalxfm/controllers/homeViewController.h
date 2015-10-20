@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface homeViewController : UIViewController
+#import "FSAudioStream.h"
+
+@interface homeViewController : UIViewController {
+    BOOL playing;
+    FSAudioStream *_audioStream;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @end

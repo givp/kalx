@@ -3,8 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>FreeStreamer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-kalxfm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>0C397AA89C62A5795B4BB32AF5463730</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A6026B1B53DC129F93D58EBD695D5AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABF7393AE10F343E786C0F193E9663F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
