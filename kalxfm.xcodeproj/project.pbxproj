@@ -13,6 +13,7 @@
 		535E10151BD5ECA000D5DBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535E10141BD5ECA000D5DBDD /* Assets.xcassets */; };
 		535E10181BD5ECA000D5DBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535E10161BD5ECA000D5DBDD /* LaunchScreen.storyboard */; };
 		535E10221BD5EEF600D5DBDD /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E10211BD5EEF600D5DBDD /* homeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		535E102C1BD60FF300D5DBDD /* playlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E102B1BD60FF300D5DBDD /* playlistViewController.m */; settings = {ASSET_TAGS = (); }; };
 		CEEADB04AC3D7EDFEB789338 /* Pods_kalxfm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3481BAA34868C0A764C7766 /* Pods_kalxfm.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		535E10211BD5EEF600D5DBDD /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = homeViewController.m; path = controllers/homeViewController.m; sourceTree = "<group>"; };
 		535E10231BD602BD00D5DBDD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		535E10251BD602C200D5DBDD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		535E102A1BD60FF300D5DBDD /* playlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playlistViewController.h; path = controllers/playlistViewController.h; sourceTree = "<group>"; };
+		535E102B1BD60FF300D5DBDD /* playlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playlistViewController.m; path = controllers/playlistViewController.m; sourceTree = "<group>"; };
 		B3481BAA34868C0A764C7766 /* Pods_kalxfm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kalxfm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E749114ADEAA82A987191991 /* Pods-kalxfm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kalxfm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kalxfm/Pods-kalxfm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +105,8 @@
 			children = (
 				535E10201BD5EEF600D5DBDD /* homeViewController.h */,
 				535E10211BD5EEF600D5DBDD /* homeViewController.m */,
+				535E102A1BD60FF300D5DBDD /* playlistViewController.h */,
+				535E102B1BD60FF300D5DBDD /* playlistViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535E102C1BD60FF300D5DBDD /* playlistViewController.m in Sources */,
 				535E100D1BD5ECA000D5DBDD /* AppDelegate.m in Sources */,
 				535E100A1BD5ECA000D5DBDD /* main.m in Sources */,
 				535E10221BD5EEF600D5DBDD /* homeViewController.m in Sources */,

@@ -18,9 +18,10 @@
     [super viewDidLoad];
     
     _audioStream = [[FSAudioStream alloc] init];
-    [_audioStream playFromURL:[NSURL URLWithString:STREAM_URL]];
-    [self.playButton setTitle:@"Stop" forState:UIControlStateNormal];
-    playing = YES;
+    [_audioStream setUrl:[NSURL URLWithString:STREAM_URL]];
+    //[_audioStream playFromURL:[NSURL URLWithString:STREAM_URL]];
+    [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
+    playing = NO;
     
      //__weak homeViewController *weakSelf = self;
     _audioStream.onMetaDataAvailable = ^(NSDictionary *metaData) {

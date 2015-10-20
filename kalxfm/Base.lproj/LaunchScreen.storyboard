@@ -36,24 +36,5 @@
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zPV-6d-ExU">
-            <objects>
-                <viewController storyboardIdentifier="leftMenuViewController" id="xox-ly-va4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rzx-BC-cBu"/>
-                        <viewControllerLayoutGuide type="bottom" id="NOG-JS-r4h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6bh-TT-eaz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JSC-Mh-rz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="13" y="1120"/>
-        </scene>
     </scenes>
 </document>
