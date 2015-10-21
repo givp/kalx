@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "FSAudioStream.h"
+#include "REMenu.h"
 
 @interface homeViewController : UIViewController {
     BOOL playing;
     FSAudioStream *_audioStream;
+    REMenu *menu;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
