@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534B10321BE6F2AD001332E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 534B10311BE6F2AD001332E3 /* GoogleService-Info.plist */; };
 		535E100A1BD5ECA000D5DBDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E10091BD5ECA000D5DBDD /* main.m */; };
 		535E100D1BD5ECA000D5DBDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E100C1BD5ECA000D5DBDD /* AppDelegate.m */; };
 		535E10131BD5ECA000D5DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535E10111BD5ECA000D5DBDD /* Main.storyboard */; };
 		535E10151BD5ECA000D5DBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535E10141BD5ECA000D5DBDD /* Assets.xcassets */; };
 		535E10181BD5ECA000D5DBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535E10161BD5ECA000D5DBDD /* LaunchScreen.storyboard */; };
-		535E10221BD5EEF600D5DBDD /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E10211BD5EEF600D5DBDD /* homeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		535E102C1BD60FF300D5DBDD /* playlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E102B1BD60FF300D5DBDD /* playlistViewController.m */; settings = {ASSET_TAGS = (); }; };
+		535E10221BD5EEF600D5DBDD /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E10211BD5EEF600D5DBDD /* homeViewController.m */; };
+		535E102C1BD60FF300D5DBDD /* playlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535E102B1BD60FF300D5DBDD /* playlistViewController.m */; };
+		53A238841BE6D25100AA3C94 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535E10231BD602BD00D5DBDD /* MediaPlayer.framework */; };
+		53A238851BE6D27900AA3C94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535E10251BD602C200D5DBDD /* AVFoundation.framework */; };
+		53C850BA1BE68204001DA053 /* aboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C850B91BE68204001DA053 /* aboutViewController.m */; };
+		53C850BC1BE6A7CB001DA053 /* tireshop_demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C850BB1BE6A7CB001DA053 /* tireshop_demo.ttf */; };
+		53C850BE1BE6B9FA001DA053 /* HipsterishFontNormal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53C850BD1BE6B9FA001DA053 /* HipsterishFontNormal.ttf */; };
 		CEEADB04AC3D7EDFEB789338 /* Pods_kalxfm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3481BAA34868C0A764C7766 /* Pods_kalxfm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3978DAB3A0944EC5AC9A8CB9 /* Pods-kalxfm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kalxfm.release.xcconfig"; path = "Pods/Target Support Files/Pods-kalxfm/Pods-kalxfm.release.xcconfig"; sourceTree = "<group>"; };
+		534B10311BE6F2AD001332E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		535E10051BD5ECA000D5DBDD /* kalxfm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kalxfm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		535E10091BD5ECA000D5DBDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		535E100B1BD5ECA000D5DBDD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +40,10 @@
 		535E10251BD602C200D5DBDD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		535E102A1BD60FF300D5DBDD /* playlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = playlistViewController.h; path = controllers/playlistViewController.h; sourceTree = "<group>"; };
 		535E102B1BD60FF300D5DBDD /* playlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = playlistViewController.m; path = controllers/playlistViewController.m; sourceTree = "<group>"; };
+		53C850B81BE68204001DA053 /* aboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aboutViewController.h; path = controllers/aboutViewController.h; sourceTree = "<group>"; };
+		53C850B91BE68204001DA053 /* aboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = aboutViewController.m; path = controllers/aboutViewController.m; sourceTree = "<group>"; };
+		53C850BB1BE6A7CB001DA053 /* tireshop_demo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = tireshop_demo.ttf; sourceTree = "<group>"; };
+		53C850BD1BE6B9FA001DA053 /* HipsterishFontNormal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HipsterishFontNormal.ttf; sourceTree = "<group>"; };
 		B3481BAA34868C0A764C7766 /* Pods_kalxfm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kalxfm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E749114ADEAA82A987191991 /* Pods-kalxfm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kalxfm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kalxfm/Pods-kalxfm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A238851BE6D27900AA3C94 /* AVFoundation.framework in Frameworks */,
+				53A238841BE6D25100AA3C94 /* MediaPlayer.framework in Frameworks */,
 				CEEADB04AC3D7EDFEB789338 /* Pods_kalxfm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +75,7 @@
 		535E0FFC1BD5ECA000D5DBDD = {
 			isa = PBXGroup;
 			children = (
+				534B10311BE6F2AD001332E3 /* GoogleService-Info.plist */,
 				535E10071BD5ECA000D5DBDD /* kalxfm */,
 				535E10061BD5ECA000D5DBDD /* Products */,
 				D3C6EED2F6958100D47AFC42 /* Pods */,
@@ -95,6 +109,8 @@
 		535E10081BD5ECA000D5DBDD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				53C850BD1BE6B9FA001DA053 /* HipsterishFontNormal.ttf */,
+				53C850BB1BE6A7CB001DA053 /* tireshop_demo.ttf */,
 				535E10091BD5ECA000D5DBDD /* main.m */,
 			);
 			name = "Supporting Files";
@@ -107,6 +123,8 @@
 				535E10211BD5EEF600D5DBDD /* homeViewController.m */,
 				535E102A1BD60FF300D5DBDD /* playlistViewController.h */,
 				535E102B1BD60FF300D5DBDD /* playlistViewController.m */,
+				53C850B81BE68204001DA053 /* aboutViewController.h */,
+				53C850B91BE68204001DA053 /* aboutViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -187,8 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				535E10181BD5ECA000D5DBDD /* LaunchScreen.storyboard in Resources */,
+				53C850BE1BE6B9FA001DA053 /* HipsterishFontNormal.ttf in Resources */,
 				535E10151BD5ECA000D5DBDD /* Assets.xcassets in Resources */,
 				535E10131BD5ECA000D5DBDD /* Main.storyboard in Resources */,
+				53C850BC1BE6A7CB001DA053 /* tireshop_demo.ttf in Resources */,
+				534B10321BE6F2AD001332E3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +271,7 @@
 				535E102C1BD60FF300D5DBDD /* playlistViewController.m in Sources */,
 				535E100D1BD5ECA000D5DBDD /* AppDelegate.m in Sources */,
 				535E100A1BD5ECA000D5DBDD /* main.m in Sources */,
+				53C850BA1BE68204001DA053 /* aboutViewController.m in Sources */,
 				535E10221BD5EEF600D5DBDD /* homeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +318,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Giv Parvaneh (ERU6Z4YNM8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -339,6 +362,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Giv Parvaneh (ERU6Z4YNM8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -361,13 +385,13 @@
 			baseConfigurationReference = E749114ADEAA82A987191991 /* Pods-kalxfm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kalxfm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.givp.kalxfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ed3bb2a-6f89-443d-a3e4-24fec4dec33c";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -376,13 +400,13 @@
 			baseConfigurationReference = 3978DAB3A0944EC5AC9A8CB9 /* Pods-kalxfm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = kalxfm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.givp.kalxfm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ed3bb2a-6f89-443d-a3e4-24fec4dec33c";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -7,16 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "FSAudioStream.h"
-#include "REMenu.h"
+#import <Google/Analytics.h>
 
 @interface homeViewController : UIViewController {
-    BOOL playing;
     FSAudioStream *_audioStream;
-    REMenu *menu;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end

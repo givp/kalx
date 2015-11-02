@@ -1,16 +1,35 @@
 PODS:
   - FreeStreamer (2.14.1):
     - Reachability (~> 3.0)
+  - Google/Analytics (1.0.7):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (1.0.7):
+    - GoogleNetworkingUtilities (~> 1.0)
+    - GoogleSymbolUtilities (~> 1.0)
+    - GoogleUtilities (~> 1.0)
+  - GoogleAnalytics (3.13.0)
+  - GoogleNetworkingUtilities (1.0.0):
+    - GoogleSymbolUtilities (~> 1.0)
+  - GoogleSymbolUtilities (1.0.0)
+  - GoogleUtilities (1.1.0):
+    - GoogleSymbolUtilities (~> 1.0.0)
+  - MBProgressHUD (0.9.1)
   - Reachability (3.2)
-  - REMenu (1.10)
 
 DEPENDENCIES:
   - FreeStreamer (~> 2.1)
-  - REMenu (~> 1.10)
+  - Google/Analytics (~> 1.0.0)
+  - MBProgressHUD (~> 0.9.1)
 
 SPEC CHECKSUMS:
   FreeStreamer: 8f4c670ae0878c5fb6da4f3006a02ab97a9abd10
+  Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
+  GoogleAnalytics: fcf1f1cad57ae1a9a53520018f0f680ceeeb8b49
+  GoogleNetworkingUtilities: 292992ab31b7b4ba32809a0e8b40e324cdfb2c0c
+  GoogleSymbolUtilities: a7b0feed1fe667c8d5e647177938d0ecd62d6948
+  GoogleUtilities: 8ed9134debe11719097881711464752900668f10
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  REMenu: 30dad195930adf6c5eeb8041e3257aa60bf9fa49
 
 COCOAPODS: 0.39.0

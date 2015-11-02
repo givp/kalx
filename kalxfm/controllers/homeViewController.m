@@ -7,6 +7,11 @@
 //
 
 #import "homeViewController.h"
+#import <MediaPlayer/MPRemoteCommand.h>
+#import <MediaPlayer/MPRemoteCommandCenter.h>
+#import <MediaPlayer/MPNowPlayingInfoCenter.h>
+#import <MediaPlayer/MPMediaItem.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
@@ -20,84 +25,119 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     
+    [self setUpUI];
+    [self setUpAudio];
     
-    REMenuItem *homeItem = [[REMenuItem alloc] initWithTitle:@"Home"
-                                                    subtitle:nil
-                                                       image:nil
-                                            highlightedImage:nil
-                                                      action:^(REMenuItem *item) {
-                                                          NSLog(@"Item: %@", item);
-                                                      }];
+    MPRemoteCommandCenter *commandCenter = [MPRemoteCommandCenter sharedCommandCenter];
+    [commandCenter.pauseCommand addTarget:self action:@selector(pauseFromRemote)];
+    [commandCenter.playCommand addTarget:self action:@selector(playFromRemote)];
+
+    // GA
+    NSString *name = @"Home";
     
-    REMenuItem *playlistItem = [[REMenuItem alloc] initWithTitle:@"Playlist"
-                                                       subtitle:nil
-                                                          image:nil
-                                               highlightedImage:nil
-                                                         action:^(REMenuItem *item) {
-                                                             NSLog(@"Item: %@", item);
-                                                         }];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:name];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
+- (void) pauseFromRemote {
+    NSLog(@"Remote pause!");
+    [_audioStream stop];
     
-    REMenuItem *aboutItem = [[REMenuItem alloc] initWithTitle:@"About"
-                                                        subtitle:nil
-                                                           image:nil
-                                                highlightedImage:nil
-                                                          action:^(REMenuItem *item) {
-                                                              NSLog(@"Item: %@", item);
-                                                          }];
+}
+
+- (void) playFromRemote {
+    NSLog(@"Remote play!");
+    [_audioStream play];
     
+}
+     
+- (void) setUpUI {
     
-    menu = [[REMenu alloc] initWithItems:@[homeItem, playlistItem, aboutItem]];
+    //UIImage* logoImage = [UIImage imageNamed:@"logo_header.png"];
+    //self.navigationItem.titleView = [[UIImageView alloc] initWithImage:logoImage];
     
-    menu.backgroundColor = [UIColor whiteColor];
-    menu.shadowColor = [UIColor whiteColor];
-    menu.textShadowColor = [UIColor whiteColor];
-    menu.liveBlur = YES;
-    menu.subtitleTextShadowColor = [UIColor whiteColor];
-    menu.separatorColor = [UIColor whiteColor];
-    menu.borderWidth = 0.0;
-    menu.highlightedBackgroundColor = RGBCOLOR(0, 106, 57);
-    menu.highlightedSeparatorColor = [UIColor whiteColor];
-    menu.highlightedTextShadowColor = RGBCOLOR(0, 106, 57);
-    menu.highlightedTextColor = [UIColor whiteColor];
-    
-    
+    [self.navigationController setNavigationBarHidden:YES];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
+}
+
+- (void) setUpAudio {
     _audioStream = [[FSAudioStream alloc] init];
-    //[_audioStream setUrl:[NSURL URLWithString:STREAM_URL]];
-    [_audioStream playFromURL:[NSURL URLWithString:STREAM_URL]];
-    [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
-    playing = NO;
+    [_audioStream setUrl:[NSURL URLWithString:STREAM_URL]];
+    //[_audioStream preload];
+    [self.playButton setTitle:@"LISTEN" forState:UIControlStateNormal];
     
-     //__weak homeViewController *weakSelf = self;
+    __weak typeof(self) weakSelf = self;
+    _audioStream.onStateChange = ^(FSAudioStreamState state) {
+        NSLog(@"STATE: %u", state);
+        
+        if (state == 2) {
+            weakSelf.statusLabel.text = @"Buffering...";
+            NSDictionary *information = @{MPMediaItemPropertyTitle : @"KALX Berkeley 90.7 FM - Buffering..."};
+            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:information];
+            
+        } else {
+            weakSelf.statusLabel.text = @"";
+        }
+        
+        if (state == 3) {
+            
+            [weakSelf.playButton setTitle:@"Stop" forState:UIControlStateNormal];
+            
+            MPMediaItemArtwork *art = [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"logo_art"]];
+            
+            NSDictionary *information = @{MPMediaItemPropertyTitle : @"KALX Berkeley 90.7 FM", MPMediaItemPropertyArtwork:art};
+            [[MPNowPlayingInfoCenter defaultCenter] setNowPlayingInfo:information];
+            
+            
+        } else {
+            [weakSelf.playButton setTitle:@"Listen" forState:UIControlStateNormal];
+        }
+        
+        
+    };
+    
+    _audioStream.onFailure = ^(FSAudioStreamError error, NSString *errorDescription) {
+        weakSelf.statusLabel.text = @"💩 Error playing stream";
+    };
+    
     _audioStream.onMetaDataAvailable = ^(NSDictionary *metaData) {
         
         NSLog(@"STREAM: %@", [metaData objectForKey:@"StreamTitle"]);
         //weakSelf.currentSongLabel.text = [metaData objectForKey:@"StreamTitle"];
     };
-
 }
-- (IBAction)menuTapped:(id)sender {
-    
-    if (menu.isOpen) {
-        return [menu close];
-    }
-    
-    [menu showFromNavigationController:self.navigationController];
+
+- (void)playlistTapped {
+    [self performSegueWithIdentifier:@"playlistSegue" sender:self];
+}
+
+- (void)aboutTapped {
+    [self performSegueWithIdentifier:@"aboutSegue" sender:self];
 }
 
 - (IBAction)playTapped:(id)sender {
     
-    if (playing) {
-        NSLog(@"Stop");
-        [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
-        [_audioStream pause];
-        playing = NO;
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    if ([_audioStream isPlaying]) {
+        [_audioStream stop];
+        
+        // GA
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                              action:@"button_press"  // Event action (required)
+                                                               label:@"stop"          // Event label
+                                                               value:nil] build]];    // Event value
         
     } else {
-    
-        NSLog(@"Play");
-        [self.playButton setTitle:@"Stop" forState:UIControlStateNormal];
-        [_audioStream pause];
-        playing = YES;
+        [_audioStream play];
+        
+        // GA        
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action"     // Event category (required)
+                                                              action:@"button_press"  // Event action (required)
+                                                               label:@"play"          // Event label
+                                                               value:nil] build]];    // Event value
     }
 
 }

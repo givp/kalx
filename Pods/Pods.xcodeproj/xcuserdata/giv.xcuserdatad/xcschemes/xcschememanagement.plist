@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-kalxfm.xcscheme</key>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>REMenu.xcscheme</key>
+		<key>Pods-kalxfm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>898ED694AD69CDDFB9C64F550BF9477F</key>
+		<key>9FC3DFFDDD1EB6FEBC387872FF927739</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6517F5FC84C9F61A12CC5344DBDC132</key>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

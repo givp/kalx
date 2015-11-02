@@ -18,11 +18,25 @@
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL: [NSURL URLWithString: PLAYLIST_URL] cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 100];
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [self.webView loadRequest: request];
+    
+    // GA
+    NSString *name = @"Playlist";
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:name];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (IBAction)closeTapped:(id)sender {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 @end

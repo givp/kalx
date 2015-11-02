@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mxb-im-XO1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mxb-im-XO1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HipsterishFontNormal.ttf">
+            <string>HipsterishFontNormal</string>
+            <string>HipsterishFontNormal</string>
+        </mutableArray>
+        <mutableArray key="tireshop_demo.ttf">
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+            <string>TireShopDemoVersion</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,46 +32,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMy-AT-YWJ">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-t0-yPV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" red="0.1333333333" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octopus" translatesAutoresizingMaskIntoConstraints="NO" id="yHg-i3-HI6">
+                                <rect key="frame" x="0.0" y="344" width="600" height="256"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="mvX-3x-pga"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMy-AT-YWJ">
+                                <rect key="frame" x="214" y="90" width="172" height="76"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="64"/>
+                                <state key="normal" title="listen">
+                                    <color key="titleColor" red="0.21176470589999999" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwt-BO-eeG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acj-Rt-sEk">
-                                <rect key="frame" x="276" y="353" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beS-Vo-Hi0">
+                                <rect key="frame" x="245" y="160" width="111" height="42"/>
                                 <animations/>
-                                <state key="normal" title="Playlist">
-                                    <color key="titleColor" red="0.1333333333" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="30"/>
+                                <state key="normal" title="playlist">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30588235294117649" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="zmN-hc-6yN" kind="presentation" id="4Ov-oK-fzc"/>
+                                    <segue destination="zmN-hc-6yN" kind="presentation" id="JT9-Wo-Krd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CC-LE-nNy">
+                                <rect key="frame" x="275" y="197" width="50" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="30"/>
+                                <state key="normal" title="info">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30588235294117649" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vJM-Xf-vJP" kind="presentation" id="iEM-CM-BsF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRo-vS-9sx">
+                                <rect key="frame" x="20" y="70" width="560" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="c2H-E0-kJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HipsterishFontNormal" family="HipsterishFontNormal" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XMy-AT-YWJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hk0-ia-MdK"/>
-                            <constraint firstItem="Acj-Rt-sEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SL6-dv-hzR"/>
+                            <constraint firstItem="wo1-t0-yPV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1Y0-ed-Ptq"/>
+                            <constraint firstItem="qRo-vS-9sx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2mf-jm-n25"/>
+                            <constraint firstItem="beS-Vo-Hi0" firstAttribute="top" secondItem="XMy-AT-YWJ" secondAttribute="bottom" constant="-6" id="CwV-H9-js2"/>
+                            <constraint firstItem="qRo-vS-9sx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DQW-Ea-k07"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yHg-i3-HI6" secondAttribute="bottom" id="DmH-6N-Oxy"/>
+                            <constraint firstItem="wo1-t0-yPV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GTb-0w-N4G"/>
+                            <constraint firstItem="9CC-LE-nNy" firstAttribute="top" secondItem="beS-Vo-Hi0" secondAttribute="bottom" constant="-5" id="Gfe-Y6-LRi"/>
+                            <constraint firstItem="XMy-AT-YWJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-109.5" id="Hk0-ia-MdK"/>
+                            <constraint firstItem="XMy-AT-YWJ" firstAttribute="centerX" secondItem="yHg-i3-HI6" secondAttribute="centerX" id="Ja6-TQ-wHq"/>
+                            <constraint firstItem="beS-Vo-Hi0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Js9-xp-gKC"/>
+                            <constraint firstItem="qRo-vS-9sx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="NtH-zE-LsI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yHg-i3-HI6" secondAttribute="bottom" id="OhK-Va-txO"/>
+                            <constraint firstItem="9CC-LE-nNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2m-Pd-7ib"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wo1-t0-yPV" secondAttribute="bottom" id="UQE-eV-Z3d"/>
+                            <constraint firstItem="qRo-vS-9sx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZbP-pq-J1R"/>
+                            <constraint firstAttribute="trailing" secondItem="yHg-i3-HI6" secondAttribute="trailing" id="eic-wV-R8e"/>
                             <constraint firstItem="XMy-AT-YWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gz9-0X-LMO"/>
-                            <constraint firstItem="Acj-Rt-sEk" firstAttribute="top" secondItem="XMy-AT-YWJ" secondAttribute="bottom" constant="38" id="yOr-Xc-Orc"/>
+                            <constraint firstAttribute="trailing" secondItem="wo1-t0-yPV" secondAttribute="trailing" id="kYb-oR-7hu"/>
+                            <constraint firstItem="yHg-i3-HI6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nYd-KP-sar"/>
+                            <constraint firstItem="XMy-AT-YWJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="vpn-Hm-yZP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hk0-ia-MdK"/>
+                                <exclude reference="gz9-0X-LMO"/>
+                                <exclude reference="OhK-Va-txO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rbH-81-bNK">
                         <barButtonItem key="leftBarButtonItem" image="hamburger" id="0jG-dF-3qe">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="menuTapped:" destination="BYZ-38-t0r" id="mij-iv-CZ4"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="playButton" destination="XMy-AT-YWJ" id="HEG-LV-99M"/>
+                        <outlet property="statusLabel" destination="qRo-vS-9sx" id="E47-EX-Ti1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,27 +145,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIR-Nu-JNu">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <rect key="frame" x="20" y="49" width="560" height="570"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKL-Oc-fW2">
+                                <rect key="frame" x="245" y="20" width="111" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huT-wN-HSZ">
+                                <rect key="frame" x="535" y="20" width="45" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.21176470589999999" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeTapped:" destination="y2c-XV-eD3" eventType="touchUpInside" id="gjw-6i-2dX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YIR-Nu-JNu" firstAttribute="centerX" secondItem="AOK-fl-hP1" secondAttribute="centerX" id="0is-nV-Es0"/>
-                            <constraint firstItem="YIR-Nu-JNu" firstAttribute="centerY" secondItem="AOK-fl-hP1" secondAttribute="centerY" constant="10" id="6mr-Xi-O0r"/>
-                            <constraint firstItem="YIR-Nu-JNu" firstAttribute="top" secondItem="lon-5z-4vX" secondAttribute="bottom" constant="-44" id="PIj-Hm-oJf"/>
+                            <constraint firstItem="YIR-Nu-JNu" firstAttribute="centerY" secondItem="AOK-fl-hP1" secondAttribute="centerY" constant="34" id="6mr-Xi-O0r"/>
+                            <constraint firstItem="rKL-Oc-fW2" firstAttribute="top" secondItem="lon-5z-4vX" secondAttribute="bottom" id="AXJ-81-u8N"/>
+                            <constraint firstItem="YIR-Nu-JNu" firstAttribute="top" secondItem="lon-5z-4vX" secondAttribute="bottom" constant="29" id="PIj-Hm-oJf"/>
                             <constraint firstItem="YIR-Nu-JNu" firstAttribute="trailing" secondItem="AOK-fl-hP1" secondAttribute="trailingMargin" id="YQ2-e9-PmN"/>
+                            <constraint firstItem="huT-wN-HSZ" firstAttribute="top" secondItem="lon-5z-4vX" secondAttribute="bottom" id="no6-1f-wsi"/>
+                            <constraint firstItem="huT-wN-HSZ" firstAttribute="trailing" secondItem="AOK-fl-hP1" secondAttribute="trailingMargin" id="p2J-3u-oIy"/>
+                            <constraint firstItem="rKL-Oc-fW2" firstAttribute="centerX" secondItem="AOK-fl-hP1" secondAttribute="centerX" id="qbz-QR-Vlg"/>
                             <constraint firstItem="YIR-Nu-JNu" firstAttribute="leading" secondItem="AOK-fl-hP1" secondAttribute="leadingMargin" id="s9E-jO-lgy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Playlist" id="Rer-qm-pIa">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="XNF-NP-YKT">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="closeTapped:" destination="y2c-XV-eD3" id="lCu-ep-yKf"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -105,20 +192,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVY-DK-aVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="186"/>
+            <point key="canvasLocation" x="2730" y="206"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Playlist-->
         <scene sceneID="2qc-oL-6OW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zmN-hc-6yN" sceneMemberID="viewController">
+                <navigationController title="Playlist" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="zmN-hc-6yN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eov-h2-cJg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.1333333333" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16862745100000001" green="0.24313725489999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -131,17 +219,82 @@
             </objects>
             <point key="canvasLocation" x="1904" y="186"/>
         </scene>
+        <!--About-->
+        <scene sceneID="LQp-Fn-mza">
+            <objects>
+                <viewController id="KUt-u4-1je" customClass="aboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="geJ-C7-CsA"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ye-DL-fGA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wsd-NL-51G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-uM-X4Q">
+                                <rect key="frame" x="275" y="28" width="50" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wS-Ra-XDJ">
+                                <rect key="frame" x="532" y="28" width="45" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="20"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.21176470589999999" green="0.33725490200000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeTapped:" destination="KUt-u4-1je" eventType="touchUpInside" id="va2-ot-dwA"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="8li-32-JZv">
+                                <rect key="frame" x="20" y="80" width="560" height="494"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">This app allows you to listen to KALX Berkeley 90.7 FM radio on your iPhone/iPod Touch.
+
+KALX Berkeley 90.7 FM broadcasts freeform radio 24 hours a day to the San Francisco Bay Area. It is a University of California and listener-supported radio station with a focus on alternative programming. ** KALX Berkeley 90.7 FM is licenced to the Regents of the University of California.  The Creative Commons license applies to the app code only. It does not apply to any content, including the KALX logo, playlists, and radio stream. Seller is not affiliated with KALX Berkeley 90.7 FM. Seller is responsible for technical support.  http://kalx.berkeley.edu  Application developed by: Giv Parvaneh - giv@givp.org</mutableString>
+                                <fontDescription key="fontDescription" name="HipsterishFontNormal" family="HipsterishFontNormal" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8li-32-JZv" firstAttribute="leading" secondItem="Wsd-NL-51G" secondAttribute="leading" constant="20" id="20n-Mq-lvj"/>
+                            <constraint firstItem="KW1-uM-X4Q" firstAttribute="centerX" secondItem="Wsd-NL-51G" secondAttribute="centerX" id="2Bw-Uz-kIJ"/>
+                            <constraint firstItem="5ye-DL-fGA" firstAttribute="top" secondItem="8li-32-JZv" secondAttribute="bottom" constant="26" id="EcT-Oj-oqh"/>
+                            <constraint firstItem="4wS-Ra-XDJ" firstAttribute="top" secondItem="geJ-C7-CsA" secondAttribute="bottom" constant="8" id="P04-dM-8Mt"/>
+                            <constraint firstAttribute="trailing" secondItem="8li-32-JZv" secondAttribute="trailing" constant="20" id="QGk-ml-BEU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4wS-Ra-XDJ" secondAttribute="trailing" constant="3" id="Tnt-uH-q78"/>
+                            <constraint firstItem="8li-32-JZv" firstAttribute="top" secondItem="4wS-Ra-XDJ" secondAttribute="bottom" constant="20" id="Ze8-iu-Dla"/>
+                            <constraint firstItem="KW1-uM-X4Q" firstAttribute="top" secondItem="geJ-C7-CsA" secondAttribute="bottom" constant="8" id="sVy-5n-nDD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="x7y-ci-HjD">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="QxK-wF-gmf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Es-mA-Srj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2716" y="924"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="zCv-5Q-fS6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mxb-im-XO1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mxb-im-XO1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J4b-cH-Als">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.1333333333" green="0.21176470589999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16862745098039217" green="0.24313725490196078" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TireShopDemoVersion" family="Tire Shop Demo Version" pointSize="0.0"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
@@ -154,8 +307,33 @@
             </objects>
             <point key="canvasLocation" x="380" y="186"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8K6-Uu-nsM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vJM-Xf-vJP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YHT-mT-DIS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.16862745100000001" green="0.24313725489999999" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KUt-u4-1je" kind="relationship" relationship="rootViewController" id="9A8-pR-FCo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQt-h1-d4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="924"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="background" width="621" height="1104"/>
         <image name="hamburger" width="23" height="23"/>
+        <image name="octopus" width="594" height="256"/>
     </resources>
 </document>
