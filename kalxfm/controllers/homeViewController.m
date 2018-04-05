@@ -17,7 +17,8 @@
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 
 //#define STREAM_URL @"http://icecast.media.berkeley.edu:8000/kalx-128.mp3"
-#define STREAM_URL @"hhttp://stream.kalx.berkeley.edu:8000/kalx-320.aac"
+//#define STREAM_URL @"http://stream.kalx.berkeley.edu:8000/kalx-320.aac"
+#define STREAM_URL @"http://stream.kalx.berkeley.edu:8000/kalx-256.mp3"
 
 @implementation homeViewController
 
